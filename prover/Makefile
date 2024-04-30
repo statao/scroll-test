@@ -7,7 +7,7 @@ else
     ZKEVM_VERSION=$(shell grep -m 1 "zkevm-circuits" ../common/libzkp/impl/Cargo.lock | cut -d "\#" -f2 | cut -c-7)
     HALO2_VERSION=$(shell grep -m 1 "halo2.git" ../common/libzkp/impl/Cargo.lock | cut -d "\#" -f2 | cut -c-7)
 endif
-
+#halo
 HALO2_GPU_VERSION=$(shell ./print_halo2gpu_version.sh | sed -n '2p')
 
 ifeq (${HALO2_GPU_VERSION},)
